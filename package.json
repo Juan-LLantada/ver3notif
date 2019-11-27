@@ -28,6 +28,7 @@
     "mustache": "^3.0.1",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.3.1",
+    "nodemailer-express-handlebars": "^3.1.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0",
     "xml-js": "^1.6.2",

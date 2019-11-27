@@ -1,18 +1,115 @@
 {
-    "name": "notificaciones",
-    "plural": "notificaciones",
-    "base": "PersistedModel",
-    "idInjection": true,
-    "options": {
-      "validateUpsert": true
+  "name": "notificaciones",
+  "plural": "notificaciones",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "mensaje": {
+      "type": "string"
     },
-    "properties": {
-        "mensaje": {
-            "type": "string"
+    "company_id": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "En_Correo": {
+      "type": "boolean"
+    },
+    "Fecha": {
+      "type": "date"
+    },
+    "usuarios": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "prototype.FindCompany": {
+      "accepts": [
+        {
+          "arg": "company_id",
+          "type": "string",
+          "required": true,
+          "description": "Id de Compañia"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "result",
+          "type": "object",
+          "root": true,
+          "description": "resultado de las notificaciones"
+        }
+      ],
+      "description": "Encuentra las notificaciones por empresa",
+      "http": [
+        {
+          "path": "/notificationsByCompany",
+          "verb": "post"
+        }
+      ]
+    },
+    "Company": {
+      "accepts": [
+        {
+          "arg": "Company_id",
+          "type": "string",
+          "required": true,
+          "description": "Es el id de la compañia"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "notificaciones",
+          "type": "object",
+          "root": true,
+          "description": "notificaciones"
+        }
+      ],
+      "description": "Encuentra Notificaciones Por compañia",
+      "http": [
+        {
+          "path": "/Company",
+          "verb": "post"
+        }
+      ]
+    },
+    "VerNotificaciones": {
+      "accepts": [
+        {
+          "arg": "User_id",
+          "type": "string",
+          "required": true,
+          "description": "El id del usuario"
         },
-        "UserId": {
-          "type": "string"
-        } 
+        {
+          "arg": "Company_id",
+          "type": "string",
+          "required": true,
+          "description": "Company id "
+        }
+      ],
+      "returns": [
+        {
+          "arg": "Resultado",
+          "type": "object",
+          "root": false,
+          "description": ""
+        }
+      ],
+      "description": "Ve las notificaciones y regresa arreglo de nuevas notificaciones y pasadas",
+      "http": [
+        {
+          "path": "/VerNotificaciones",
+          "verb": "post"
+        }
+      ]
     }
   }
-  
+}

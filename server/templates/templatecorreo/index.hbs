@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            .alignleft {
+                float: left;
+                font-size: 35px;
+                color: #485658;
+            }
+            .alignright {
+                float: right;
+                color: #333333;
+            }
+            .rcorners1 {
+                border-radius: 25px;
+                background: #485658;
+                padding: 20px;
+                width: 600px;
+                height: 150px;
+            }
+            .Liga{
+                text-decoration: none;
+                color:#485658 ;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+ 
+            }
+
+            body,
+            html {
+                height: 100%;
+                font-family: 'Courier New', Courier, monospace;
+                color: #333333;
+               
+            }
+
+            /* ------------------------------------ */
+            a {
+                margin: 0;
+                transition: all 0.4s;
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+            }
+
+            a:focus {
+                outline: none !important;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            /* ------------------------------------ */
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            li,
+            ul {
+                margin: 0;
+                list-style-type: none;
+            }
+
+            /* ------------------------------------ */
+            input {
+                display: block;
+                outline: none;
+                border: none !important;
+            }
+
+            textarea {
+                display: block;
+                outline: none;
+            }
+
+            input:focus,
+            textarea:focus {
+                border-color: transparent !important;
+            }
+
+            /* ------------------------------------ */
+            button {
+                outline: none !important;
+                border: none;
+                background: transparent;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+
+            iframe {
+                border: none !important;
+            }
+            /*/
+            /////////////////////////////////////////////////////////////////
+            [Table]*/ .limiter {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .container-table100 {
+                width: 100%;
+                min-height: 100vh;
+                background: #ffffff;
+
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 33px 30px;
+            }
+
+            .wrap-table100 {
+                width: 1100px;
+            }
+            /*/
+            /////////////////////////////////////////////////////////////////
+            [Table]*/ table {
+                width: 100%;
+                background-color: #fff;
+            }
+
+            td,
+            th {
+                font-weight: unset;
+                padding-right: 10px;
+            }
+
+            .column100 {
+                width: 130px;
+                padding-left: 25px;
+            }
+
+            .column100.column1 {
+                width: 265px;
+                padding-left: 20px;
+            }
+
+            .row100.head th {
+                padding-top: 24px;
+                padding-bottom: 20px;
+                border-radius: 9px;
+                text-size:40px;
+            }
+            .row100 td {
+                padding-top: 18px;
+                padding-bottom: 14px;
+            }
+
+            /*==================================================================
+[ Ver1 ]*/
+            .table100.ver1 td {
+                font-family: Montserrat-Regular;
+                font-size: 14px;
+                color: #808080;
+                line-height: 1.4;
+            }
+
+            .table100.ver1 th {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                color: #fff;
+                line-height: 1.4;
+                text-transform: uppercase;
+
+                background-color: #485658;
+            }
+
+            .table100.ver1 .row100:hover {
+                background-color: #f2f2f2;
+            }
+
+            .table100.ver1 .hov-column-ver1 {
+                background-color: #f2f2f2;
+            }
+
+            .table100.ver1 .hov-column-head-ver1 {
+                background-color: #485658 !important;
+            }
+
+            .table100.ver1 .row100 td:hover {
+                background-color: #485658;
+                color: #EFEFEF;
+            }
+
+            /*==================================================================
+[ Ver2 ]*/
+            .table100.ver2 td {
+                font-family: Montserrat-Regular;
+                font-size: 14px;
+                color: #808080;
+                line-height: 1.4;
+            }
+
+            .table100.ver2 th {
+                font-family: Montserrat-Medium;
+                font-size: 12px;
+                color: #fff;
+                line-height: 1.4;
+                text-transform: uppercase;
+
+                background-color: #333333;
+            }
+
+            .table100.ver2 .row100:hover td {
+                background-color: #83d160;
+                color: #fff;
+            }
+
+            .table100.ver2 .hov-column-ver2 {
+                background-color: #83d160;
+                color: #fff;
+            }
+
+            .table100.ver2 .hov-column-head-ver2 {
+                background-color: #484848 !important;
+            }
+
+            .table100.ver2 .row100 td:hover {
+                background-color: #57b846;
+                color: #fff;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <title>Table V03</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!--===============================================================================================-->
+            </head>
+            <body></div>
+
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100 ver1 m-b-110">
+                            <div>
+                                <p class="alignleft"> <strong>ENERGIA ELECTRICA</strong> 
+                                    <br>
+
+                                   <strong>{{nombre_company}}</strong>
+
+                                </p>
+                                <p class="alignright">
+                                <img src="cid:unique"  width="200" alt="300">
+                            </div>
+                            <br>
+                            <br>
+                            <br> <br><br><br><br>
+                            <hr>
+                            <p class="alignright">PERIODO 19-11-2019 a 18-10-2019</p>
+<br> <br> <br> <br> 
+                            <table data-vertable="ver1">
+                                  <tr>
+                                        <td class="column100 column1" bgcolor="#FFFFFF">  </td>
+                                        <td class="column100 column2" bgcolor="#FFFFFF"><center><img src="cid:nota"  width="60" alt="60"></center> </td>
+                                        <td class="column100 column3" bgcolor="#FFFFFF"><center><img src="cid:consumo"  width="60" alt="60"></center>  </td>
+                                        <td class="column100 column4" bgcolor="#FFFFFF"><center><img src="cid:costo"  width="60" alt="60"></center></td>
+                                    </tr>
+
+
+                            </table>
+                            <table data-vertable="ver1">
+                                <thead>
+
+                                    
+                                    <tr class="row100 head">
+                                        <th class="column100 column1" data-column="column1">Servicios </th>
+                                        <th class="column100 column2" data-column="column2">Concepto</th>
+                                        <th class="column100 column3" data-column="column3">Energia</th>
+                                        <th class="column100 column4" data-column="column4">Costo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each fila}}
+                                  
+                                    
+                                    <tr class="row100">
+                                        <td class="column100 column1" data-column="column1">{{this.dispositivo}}</td>
+                                        <td class="column100 column2" data-column="column2">Consumo </td>
+                                        <td class="column100 column3" data-column="column3">--</td>
+                                        <td class="column100 column4" data-column="column4">$ {{this.costo}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-center">
+<br>
+                            <center class="Liga"> www.ienergybook.com </center> 
+                        </div>
+                        <p class="alignright">   <img src="cid:unique2"  width="50" alt="50"> </p>
+
+                    </body>
+                </html>
+            </body>
+        </html>

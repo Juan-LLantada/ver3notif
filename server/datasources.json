@@ -16,7 +16,6 @@
   "storage": {
     "name": "storage",
     "connector": "loopback-component-storage",
- 
     "provider": "filesystem",
     "maxFileSize": "1048576",
     "root": "ArchivosTemporales"

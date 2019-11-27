@@ -57,13 +57,7 @@
       "type": "belongsTo",
       "model": "Company",
       "foreignKey": "company_id"
-    },
-    "notificaciones": {
-      "type": "hasMany",
-      "model": "notificaciones",
-      "foreignKey": "UserId"
     }
-
   },
   "acls": [
     {

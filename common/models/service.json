@@ -1,90 +1,89 @@
 {
-    "name": "Service",
-    "plural": "Services",
-    "base": "PersistedModel",
-    "idInjection": true,
-    "options": {
-      "validateUpsert": true
+  "name": "Service",
+  "plural": "Services",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "serviceName": {
+      "type": "string",
+      "required": true
     },
-    "properties": {
-      "serviceName": {
-          "type": "string",
-          "required": true
-      },
-      "devices": {
-          "type": "array",
-          "required": true
-      },
-      "consumptionSummary": {
-          "type": "object",
-          "required": true,
-          "default": {}
-      },
-      "dailyReadings": {
-          "type": "object",
-          "required": true,
-          "default": {}
-      },
-      "monthlyReadings": {
-        "type": "object",
-        "required": true,
-        "default": {}
-      },
-      "epimp": {
-          "type": "object",
-          "required": true,
-          "default": {}
-      },
-      "fp": {
-        "type": "number",
-        "required": true,
-        "default": 0
-      },
-      "reactive": {
-        "type": "number",
-        "required": true,
-        "default": 0
-      },
-      "dp": {
-        "type": "number",
-        "required": true,
-        "default": 0
-      }
+    "devices": {
+      "type": "array",
+      "required": true
     },
-    "validations": [],
-    "relations": {
-        "designatedMeter": {
-            "type": "belongsTo",
-            "model": "DesignatedMeter",
-            "foreignKey": "designatedMeterId"
-        }
+    "consumptionSummary": {
+      "type": "object",
+      "required": true,
+      "default": {}
     },
-    "acls": [
-      {
-        "accessType": "*",
-        "principalType": "ROLE",
-        "principalId": "$unauthenticated",
-        "permission": "DENY"
-      },
-      {
-        "accessType": "*",
-        "principalType": "ROLE",
-        "principalId": "admin",
-        "permission": "ALLOW"
-      },
-      {
-        "accessType": "*",
-        "principalType": "ROLE",
-        "principalId": "$everyone",
-        "permission": "ALLOW"
-      },
-      {
-        "accessType": "*",
-        "principalType": "ROLE",
-        "principalId": "$owner",
-        "permission": "ALLOW"
-      }
-    ],
-    "methods": {}
-  }
-  
+    "dailyReadings": {
+      "type": "object",
+      "required": true,
+      "default": {}
+    },
+    "monthlyReadings": {
+      "type": "object",
+      "required": true,
+      "default": {}
+    },
+    "epimp": {
+      "type": "object",
+      "required": true,
+      "default": {}
+    },
+    "fp": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "reactive": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "dp": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "designatedMeter": {
+      "type": "belongsTo",
+      "model": "DesignatedMeter",
+      "foreignKey": "designatedMeterId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

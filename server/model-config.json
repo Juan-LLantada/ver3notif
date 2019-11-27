@@ -80,7 +80,7 @@
     "dataSource": "storage",
     "public": false
   },
-  "edsRecords": {  
+  "edsRecords": {
     "dataSource": "mongodb",
     "public": true
   },

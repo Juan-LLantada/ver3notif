@@ -5,6 +5,7 @@ const async = require('async');
 const Constants = require('./../../server/constants.json');
 const mail = require('../../server/modules/mail.js');
 const path = require('path');
+const notificaciones = app.loopback.notificaciones
 
 module.exports = function(Company) {
     Company.register = function register(contactData, user, cb){
@@ -236,4 +237,10 @@ module.exports = function(Company) {
             returns: { arg: 'response', type: 'string', root: true }
         }
     );
-};
+
+
+//-------------------------------------------------------------------------
+
+
+
+}
