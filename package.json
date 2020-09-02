@@ -23,7 +23,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
     "loopback-component-storage": "^3.6.3",
-    "loopback-connector-mongodb": "^1.18.1",
+    "loopback-connector-mongodb": "^5.3.0",
     "moment-timezone": "^0.5.21",
     "mustache": "^3.0.1",
     "node-cron": "^2.0.3",
